@@ -1,7 +1,14 @@
-function fn(number) {
+function print(fn) {
+  const result = fn(2);
+  console.log(result);
+}
+
+function fn(number = 3) {
     return number * 2;
   }
   
+  debugger;
+
   console.log(fn(2));
   console.log(fn(4));
   
