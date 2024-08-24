@@ -7,8 +7,8 @@ import Hello from "./components/Hello"
 const Example = () => {
   return (
     <>
-      <Hello />
-      <Bye />
+      <Hello name={'Tom'}/>
+      <Bye name={'Tom'}/>
     </>
   );
 };
