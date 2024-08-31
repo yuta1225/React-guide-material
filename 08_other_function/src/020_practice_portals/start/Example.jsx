@@ -5,6 +5,7 @@ import Toast from "./components/Toast";
 
 const ToastPortal = ({ children }) => {
   const target = document.querySelector('.container.start')
+  return createPortal(children, target);
 }
 
 const Example = () => {
@@ -27,10 +28,12 @@ const Example = () => {
         トーストを表示する
       </button>
       {toastOpen && (
-          <Toast
+        <ToastPortal>
+           <Toast
             visible={toastOpen}
             handleCloseClick={() => setToastOpen(false)}
           />
+        </ToastPortal>
       )}
     </div>
   );
